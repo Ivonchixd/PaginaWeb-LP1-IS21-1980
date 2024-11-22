@@ -1,12 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejemplo template</title>
+    <title>Ejemplo Template Completo</title>
 </head>
+
 <body>
-    <h1>Hola mundo! prueba template</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit voluptatum consequatur sapiente exercitationem aliquid eos obcaecati corrupti, quod tenetur possimus itaque, blanditiis optio dignissimos ad esse ipsum facilis dolore quas.</p>
+    <header>
+        <h1>Bienvenido a mi página</h1>
+        <nav>
+            <ul>
+                <li><a href="#section1">Inicio</a></li>
+                <li><a href="#section2">Acerca de</a></li>
+                <li><a href="#section3">Servicios</a></li>
+                <li><a href="#section4">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="section1">
+            <h2>Inicio</h2>
+            <p>Este es un ejemplo de pagina web HTML con varios elementos.</p>
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+                alt="Ejemplo de imagen" style="width: 600px; height: 200px;">
+        </section>
+
+        <section id="section2">
+            <h2>Acerca de</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo natus nisi libero voluptatem sed atque,
+                vitae a ipsam velit, odio ex dignissimos in vel aliquam ipsum obcaecati! Ea, optio placeat.</p>
+            <blockquote>
+                "La tecnología es mejor cuando reúne a las personas." - Matt Mullenweg
+            </blockquote>
+        </section>
+
+        <section id="section3">
+            <h2>Servicios</h2>
+            <ul>
+                <li>Desarrollo de software</li>
+                <li>Consultoría tecnológica</li>
+                <li>Infraestructura en la nube</li>
+            </ul>
+            <table border="1">
+                <caption>Resumen de Servicios</caption>
+                <thead>
+                    <tr>
+                        <th>Servicio</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Desarrollo de software</td>
+                        <td>Diseñamos y desarrollamos aplicaciones web y móviles a medida.</td>
+                    </tr>
+                    <tr>
+                        <td>Consultoría</td>
+                        <td>Brindamos asesoramiento técnico para optimizar tu empresa.</td>
+                    </tr>
+                    <tr>
+                        <td>Infraestructura</td>
+                        <td>Configuramos sistemas en la nube para mayor escalabilidad.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="section4">
+            <h2>Contacto</h2>
+            <form action="/submit" method="POST">
+                <label for="name">Nombre:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">Correo electrónico:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="message">Mensaje:</label><br>
+                <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Ivan Sanche. Todos los derechos reservados.</p>
+        <address>
+            Contacto: <a href="mailto:info@mipagina.com">info@mipagina.com</a><br>
+            Teléfono: +1-234-567-890
+        </address>
+    </footer>
 </body>
+
 </html>
