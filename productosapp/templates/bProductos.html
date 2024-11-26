@@ -14,6 +14,12 @@
     </ul>
 
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia minus esse, molestiae repellendus sapiente, iusto deserunt non modi provident quod officiis, praesentium fuga?</p>
+    <ul>
+        {% for x in misProductos %}
+        <li><a href="productoDetalle/{{ x.codigoProducto }}">{{ x.codigoProducto }} - {{ x.descripcionProducto }}</a></li>
+    </ul>
+    {% endfor %}
+    
     {% include 'piePagina.html' %}
 </body>
 </html>

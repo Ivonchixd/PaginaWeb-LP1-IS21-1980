@@ -14,5 +14,14 @@ def Productos(request):
     }
     return HttpResponse(template.render(context, request))
 
+def productoDetalle(request, codigoProducto):
+    miProducto = productos.objects.get(codigoProducto=codigoProducto)
+    template = loader.get_template('productoDetalle.html')
+    context = {
+        'miProducto': miProducto,
+    }
+    return HttpResponse(template.render(context, request))
+
+
 def index(request):
     return render(request, 'index.html')
