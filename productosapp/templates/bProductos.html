@@ -1,25 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bProductos</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/productos.css' %}">
 </head>
 <body>
-    <h1>Ejemplo para mostrar nuestros modelos</h1>
-    <ul>
-        {% for x in misProductos %}
-        <li>{{ x.codigoProducto }} - {{ x.descripcionProducto }}</li>
-        {% endfor %}
-    </ul>
-
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia minus esse, molestiae repellendus sapiente, iusto deserunt non modi provident quod officiis, praesentium fuga?</p>
-    <ul>
-        {% for x in misProductos %}
-        <li><a href="productoDetalle/{{ x.codigoProducto }}">{{ x.codigoProducto }} - {{ x.descripcionProducto }}</a></li>
-    </ul>
-    {% endfor %}
-    
-    {% include 'piePagina.html' %}
+    <header>
+        <h1>Tienda de Ivan</h1>
+    </header>
+    <nav>
+        <a href="/">Inicio</a>
+        <a href="/Productos">Productos</a>
+    </nav>
+    <div class="container">
+        <h2>Productos Disponibles</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Descripción</th>
+                    <th>Estatus</th>
+                    <th>Detalle</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for x in misProductos %}
+                <tr>
+                    <td>{{ x.codigoProducto }}</td>
+                    <td>{{ x.descripcionProducto }}</td>
+                    <td>
+                        {% if x.estatus %}
+                            Disponible
+                        {% else %}
+                            No disponible
+                        {% endif %}
+                    </td>
+                    <td class="detalle-link">
+                        <a href="ProductoDetalle/{{ x.codigoProducto }}">Ver detalle</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>

@@ -14,8 +14,8 @@ def Productos(request):
     }
     return HttpResponse(template.render(context, request))
 
-def productoDetalle(request, codigoProducto):
-    miProducto = productos.objects.get(codigoProducto=codigoProducto)
+def ProductoDetalle(request, codigoProducto):
+    miProducto = products.objects.get(codigoProducto=codigoProducto)
     template = loader.get_template('productoDetalle.html')
     context = {
         'miProducto': miProducto,
