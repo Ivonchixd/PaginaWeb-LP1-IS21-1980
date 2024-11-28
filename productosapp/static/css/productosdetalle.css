@@ -1,0 +1,114 @@
+/* Diseño para la página ProductoDetalle */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #0078D7;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    padding: 20px;
+}
+
+h1 {
+    color: #0078D7;
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+p {
+    color: #333;
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.detalle-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.detalle-link a {
+    color: #0078D7;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.detalle-link a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para los botones y enlaces */
+button,
+a {
+    background-color: #0078D7;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover,
+a:hover {
+    background-color: #005fa3;
+}
+
+/* Responsive: Ajuste de diseño en dispositivos pequeños */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    nav a {
+        margin: 5px 0;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
